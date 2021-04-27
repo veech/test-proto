@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option go_package = "proto/go/pb";
+
+message Forecast {
+	int64 ref_time = 1;
+	int64 forecast_time = 2;
+	string url = 3;
+	DataInfo data_info = 4;
+	repeated string levels = 5;
+	repeated CoordinateData data = 6;
+}
+
+message DataInfo {
+	double lat_min = 1;
+	double lat_max = 2;
+	double long_min = 3;
+	double long_max = 4;
+	double resolution = 5;
+}
+
+message CoordinateData {
+	double latitude = 1;
+  double longitude = 2;
+  repeated Value values = 3;
+}
+
+message Value {
+	optional float TMP  = 1;
+	optional float VGRD = 2;
+	optional float UGRD = 3;
+}
