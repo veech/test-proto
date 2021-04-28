@@ -1,0 +1,12 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "files": [
+    "."
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {},
+  "name": "urban-sky-proto"
+}
